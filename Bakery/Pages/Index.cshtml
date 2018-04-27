@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome to Fourth Coffee!</h1>
+
+<div id="featuredProduct">
+    <img alt="Featured Product" src="~/images/Products/@Model.FeaturedProduct.ImageName" />
+    <div id="featuredProductInfo">
+        <div id="productInfo">
+            <h2>@Model.FeaturedProduct.Name</h2>
+            <p class="price">$@string.Format("{0:f}", @Model.FeaturedProduct.Price)</p>
+            <p class="description">@Model.FeaturedProduct.Description</p>
+        </div>
+        <div id="callToAction">
+            <a class="order-button" href="~/order/@Model.FeaturedProduct.Id" title="Order @Model.FeaturedProduct.Name">Order Now</a>
+        </div>
+    </div>
+</div>
+
+<div id="productsWrapper">
+    <ul id="products" data-role="listview" data-inset="true">
+        @foreach (var product in @Model.Products)
+        {
+            <li class="product">
+                <a href="~/order/@product.Id" title="Order @product.Name">
+                    <img class="hide-from-desktop" src="~/images/Products/Thumbnails/@product.ImageName" alt="Image of @product.Name" />
+
+                    <div class="productInfo">
+                        <h3>@product.Name</h3>
+                        <img class="product-image hide-from-mobile" src="~/images/Products/Thumbnails/@product.ImageName" alt="Image of @product.Name" />
+                        <p class="description">@product.Description</p>
+                        <p class="price hide-from-desktop">$@string.Format("{0:f}", product.Price)</p>
+                    </div>
+                </a>
+
+                <!-- Desktop only -->
+                <div class="action  hide-from-mobile">
+                    <p class="price">$@string.Format("{0:f}", product.Price)</p>
+                    <a class="order-button" href="~/order/@product.Id" title="Order @product.Name">Order Now</a>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

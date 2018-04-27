@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Fourth Coffee - @ViewData["Title"]</title>
+    <link href="~/css/site.min.css" rel="stylesheet" />
+    <link href="~/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div id="page">
+        <header>
+            <p class="site-title"><a href="~/">Fourth Coffee</a></p>
+            <nav>
+                <ul>
+                    <li><a href="~/">Home</a></li>
+                    <li><a href="~/About">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="body">
+            @RenderBody()
+        </div>
+        <footer>
+            &copy;@DateTime.Now.Year - Fourth Coffee
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

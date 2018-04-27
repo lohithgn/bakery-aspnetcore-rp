@@ -1,0 +1,9 @@
+.vs/
+bin/
+obj/
+*.user
+launchSettings.json
+artifacts/
+msbuild.binlog
+.vscode/
+BenchmarkDotNet.Artifacts/
