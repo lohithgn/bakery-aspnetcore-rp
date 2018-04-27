@@ -12,4 +12,12 @@ Durig the Webmatrix days, "Bakery" was one of the site templates available out o
 - Run the solution
 
 # Screenshots
+#### Bakery Home Page
+![Bakery Home](https://raw.githubusercontent.com/lohithgn/bakery-aspnetcore-rp/master/assets/Bakery-Home.png)
+
+#### Bakery Order Page
+![Bakery Order](https://raw.githubusercontent.com/lohithgn/bakery-aspnetcore-rp/master/assets/Bakery-Order.png)
+
+#### Bakery About Page
+![Bakery About](https://raw.githubusercontent.com/lohithgn/bakery-aspnetcore-rp/master/assets/Bakery-About.png)
 
